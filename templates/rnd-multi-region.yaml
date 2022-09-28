@@ -18,7 +18,7 @@ Resources:
         RestrictPublicBuckets: True
       AccessControl: Private
       LoggingConfiguration:
-        DestinationBucketName: "arn:aws:s3::763766484361:accesspoint/mktm1ywsxwg7o.mrap"
+        DestinationBucketName: main-logging-bucket-rnd
         LogFilePrefix: testing-logs
 
   DenyInsecureAccessPolicy:
