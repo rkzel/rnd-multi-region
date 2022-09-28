@@ -7,7 +7,6 @@ Resources:
     Type: AWS::S3::Bucket
     Properties:
       BucketName: 'test-store-s3-rnd-rkzel'
-      BucketKeyEnabled: True
       BucketEncryption:
         ServerSideEncryptionConfiguration:
         - ServerSideEncryptionByDefault:
@@ -26,4 +25,11 @@ Resources:
     Type: 'AWS::S3::Bucket'
     Properties:
       AccessControl: LogDeliveryWrite
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+        - ServerSideEncryptionByDefault:
+            SSEAlgorithm: aws:kms
+      LoggingConfiguration:
+        DestinationBucketName: !Ref LoggingBucket
+        LogFilePrefix: testing-logs
 
