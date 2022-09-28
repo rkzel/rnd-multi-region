@@ -2,6 +2,13 @@ AWSTemplateFormatVersion: 2010-09-09
 
 Description: test S3 template
 
+Mappings:
+  RegionalLoggingBucket:
+    eu-west-1:
+      Name: main-logging-bucket-rnd
+    eu-west-2:
+      Name: main-logging-bucket-rnd-london
+
 Resources:
   TestStore:
     Type: AWS::S3::Bucket
@@ -17,7 +24,7 @@ Resources:
         RestrictPublicBuckets: True
       AccessControl: Private
       LoggingConfiguration:
-        DestinationBucketName: main-logging-bucket-rnd
+        DestinationBucketName: !FindInMap [RegionalLoggingBucket, !Ref "AWS::Region", Name]
         LogFilePrefix: rnd-logs
 
   DenyInsecureAccessPolicy:
