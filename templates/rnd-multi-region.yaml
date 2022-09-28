@@ -6,7 +6,6 @@ Resources:
   TestStore:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: 'test-store-s3-rnd-rkzel-4'
       BucketEncryption:
         ServerSideEncryptionConfiguration:
         - ServerSideEncryptionByDefault:
