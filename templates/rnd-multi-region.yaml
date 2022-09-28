@@ -18,7 +18,7 @@ Resources:
       AccessControl: Private
       LoggingConfiguration:
         DestinationBucketName: main-logging-bucket-rnd
-        LogFilePrefix: testing-logs
+        LogFilePrefix: rnd-logs
 
   DenyInsecureAccessPolicy:
     Type: AWS::S3::BucketPolicy 
