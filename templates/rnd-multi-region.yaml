@@ -30,6 +30,6 @@ Resources:
         - ServerSideEncryptionByDefault:
             SSEAlgorithm: aws:kms
       LoggingConfiguration:
-        DestinationBucketName: !Ref LoggingBucket
+        DestinationBucketName: !Ref TestStore
         LogFilePrefix: testing-logs
 
