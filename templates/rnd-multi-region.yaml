@@ -25,7 +25,7 @@ Resources:
       AccessControl: Private
       LoggingConfiguration:
         DestinationBucketName: !FindInMap [RegionalLoggingBucket, !Ref "AWS::Region", Name]
-        LogFilePrefix: rnd-logs-2
+        LogFilePrefix: rnd-logs-3
 
   DenyInsecureAccessPolicy:
     Type: AWS::S3::BucketPolicy 
